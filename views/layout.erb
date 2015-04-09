@@ -1,0 +1,31 @@
+<head>
+<meta charset="UTF-8">
+  <title>Web CRM App</title>
+  <link rel="stylesheet" href="/styles.css" type="text/css">
+</head>
+<body>
+
+  <header>
+    <h1 class="head">CRM Web Application</h1>
+  </header>
+
+  <div class="column_left">
+    <ul list class="navUL"><h1>Links</h1>
+      <li><a href="/">Main Menu</a></li>
+      <li><a href="/contacts/new">Add Contact</a></li>
+      <li><a href="/contacts">View All Contacts</a></li>
+    </ul>
+
+
+    <footer>
+      <h3 class="foot">&copy; 0neirocom Systems</h3>
+    </footer>
+  </div>
+
+  <div class="column_right">
+    <div class="interior">
+      <%= yield %>
+    </div>
+  </div>
+
+</body>
