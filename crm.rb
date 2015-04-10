@@ -21,9 +21,22 @@ get '/contacts/new' do
   erb :new_contact
 end
 
-get '/contacts/1000' do
-  @contact = @@rolodex.find(1000)
-  erb :contact_details
+get "/contacts/:id/edit" do
+  @contact = @@rolodex.find(params[:id].to_i)
+  if @contact
+    erb :edit_contact
+  else
+    raise Sinatra::NotFound
+  end
+end
+
+get '/contacts/:id' do
+  @contact = @@rolodex.find(params[:id].to_i)
+    if @contact
+    erb :show_contact
+  else
+    raise Sinatra::NotFound
+  end
 end
 
 post '/contacts' do
