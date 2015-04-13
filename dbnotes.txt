@@ -1,0 +1,139 @@
+Saving your Data/ Intro to databases
+
+Store data in organized way
+
+More cosntistant and structured
+
+Better data validation
+
+Better long term storage.
+
+Improving consistancy of data is very valuable for dining data later or doing calculations on data.
+
+Easier to find, easier to manupulate.
+
+We will be using SQL, which is based around storing and searching for data
+
+Rekational databases
+Developed in 70e
+Use SQL
+Populr
+Ppstgres, MySQL, MS Server, Oracle, IBM DB2
+
+Data is stored in related tables.
+
+
+NoSQL databases
+
+Developed in last decade
+dont use SQL
+Changing needs for high demand, high traffic web
+RDBMS can be slow
+Document based or key value store
+
+Specialized use cases
+Often used alongside RDBMSes
+
+Most time for crud apps SQL databases will work pretty well.
+
+For things like data mining, NOSQLDBs can help.
+
+Relational Dababases
+
+A db has multiple tables
+Tables made up of columns
+Each column has a data type
+data represented as rows as "records"
+all rows have the same columns
+A primary key is a unique identifier for the row
+
+Tables relate to one another
+
+Ids integers, name string, email string eployer string.
+
+SQL
+
+Cant just add data without a table first
+
+
+SQL can do two things -
+
+Define the schema (The structure of the data)
+(Data definition labels DDL)
+
+Manipulate the data (Crud)
+Data manipulation Language
+
+
+Define te schema
+
+CREATE A TABLE
+
+DROP TABLE
+
+ALTER TABLE
+
+Etc.
+
+
+
+
+CRUD Language
+
+1. SELECT name FROM users WHERE id = 5;
+
+ COMMAND capsed Data type lowercase
+
+2. INSERT INTO users (name) VALUES ('KV');
+
+ CREATE action
+
+3. UPDATE people SET iq=205 WHERE name ='KV';
+
+4. DELETE FROM pets WHERE smelliness -'high';
+
+
+
+Try and be as specific as possible, because if you arent specific enough you could change more thn you intend to.
+
+
+until you type in semicolon you are stucl. Ctrl D escapes
+
+
+ORMs automatically represent DB data as objects in code
+OBJECT RELATIONAL MAPPING
+
+1  Acts as an interface to the database in a program
+
+2 In ruby, a class would represent a database table, attributes are DB columns
+
+3 Provides Ruby Methods instead o having to write sql
+
+Each instantiation of a class creates a new row in the DB class.
+
+DataMapper
+
+We will be using this for Sinatra, not RAILS. Rails uses ActiveRecord.
+
+
+Finding a record: Contact.get(10)
+
+Create a record:
+Contact.create (
+first_name: "Julie",
+last_name: "Hache"
+)
+
+
+Update a record:
+@contact.first_name = "Mina"
+@contact.save
+
+
+Delete a record: @contact.destroy
+
+
+Class name always singular
+table name always plural
+
+
